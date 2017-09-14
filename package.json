@@ -2,9 +2,12 @@
   "name": "with-lyrics",
   "version": "1.0.0",
   "description": "A cross-platform video editor to create music videos.",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "build": "tsc",
+    "start": "electron .",
+    "noob": "npm install && npm run build && npm start"
   },
   "repository": {
     "type": "git",
