@@ -87,12 +87,12 @@ export class Preview {
     }
   }
   
-  public play(): void {
+  protected play(): void {
     this.playing = true;
     this.render();
   }
   
-  public stop(): void {
+  protected stop(): void {
     cancelAnimationFrame(this.animationFrame);
     this.playing = false;
     this.animationFrame = 0;
