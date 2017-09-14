@@ -78,7 +78,8 @@ export class Preview {
   }
 
   public draw(): void {
-    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    this.context.fillStyle = '#000000';
+    this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
     for (const layer of this.layers) {
       if (layer.getStartTime() > this.audio.currentTime && layer.getEndTime() < this.audio.currentTime) {
